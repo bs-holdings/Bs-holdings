@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BS Holdings & Development | Real Estate</title>
+<meta name="description" content="BS Holdings & Development — property, land, joint venture and real estate services in Dhaka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1724;--ink2:#152234;--paper:#f4f5f2;--white:#fff;
+  --muted:#697585;--line:#dfe3e8;--gold:#a88448;--gold2:#c4a66f;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--paper);font-family:"DM Sans",Arial,sans-serif}
+h1,h2,h3,.brand{font-family:Manrope,Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+.container{max-width:1180px;margin:auto;padding:0 28px}
+.topbar{height:36px;background:#0a111b;color:#b8c1cc;font-size:11px;letter-spacing:.4px}
+.topbar .container{height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav{height:78px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}
+.navin{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brandbox{display:flex;align-items:center;gap:13px}
+.logo{width:48px;height:48px;border:1px solid #1c2b3d;background:#101b2a;display:grid;place-items:center;position:relative;overflow:hidden}
+.logo:before{content:"";position:absolute;inset:5px;border:1px solid rgba(196,166,111,.55)}
+.logo svg{width:31px;height:31px;position:relative;z-index:1}
+.brand{font-size:16px;font-weight:800;letter-spacing:.9px}
+.subbrand{font-size:8.5px;color:#7a8592;letter-spacing:2.1px;margin-top:3px;font-weight:700}
+.menu{display:flex;gap:34px;align-items:center;font-size:12px;font-weight:700;letter-spacing:.7px;color:#445161}
+.menu a:hover{color:#a88448}
+.navcta{background:#102033;color:white;padding:13px 19px;font-size:11px;font-weight:700;letter-spacing:.6px}
+.mobile-menu{display:none}
+
+.hero{background:var(--ink);color:white;min-height:650px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:0;bottom:0;width:48%;height:1px;background:linear-gradient(90deg,transparent,rgba(196,166,111,.28))}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center;min-height:650px;position:relative;z-index:1}
+.eyebrow{font-size:11px;letter-spacing:2.2px;color:#c4a66f;font-weight:800;margin-bottom:22px}
+.hero h1{font-size:clamp(43px,6vw,76px);line-height:1.02;letter-spacing:-2.8px;margin:0;max-width:760px}
+.hero h1 span{color:#c8aa70}
+.hero p{font-size:17px;line-height:1.8;color:#b8c1cd;max-width:650px;margin:26px 0 0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{padding:15px 22px;font-size:12px;font-weight:800;letter-spacing:.4px}
+.btn.gold{background:#b08c51;color:white}
+.btn.ghost{border:1px solid #425064;color:white}
+.hero-note{display:flex;gap:28px;margin-top:42px;padding-top:22px;border-top:1px solid #2b3848}
+.hero-note div{font-size:10px;color:#8390a0;letter-spacing:1.3px}
+.hero-note strong{display:block;color:white;font-size:13px;letter-spacing:0;margin-top:5px}
+
+.brand-panel{height:410px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(135deg,#101b29,#0d1724);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.brand-panel:before,.brand-panel:after{content:"";position:absolute;background:rgba(196,166,111,.45)}
+.brand-panel:before{width:1px;height:54px;top:28px;left:28px}
+.brand-panel:after{width:54px;height:1px;top:28px;left:28px}
+.brand-panel-mark{display:flex;align-items:center;gap:2px;font-family:Manrope,Arial,sans-serif;font-size:104px;line-height:.8;font-weight:800;letter-spacing:-18px;color:#f4f5f2}
+.brand-panel-mark span:first-child{color:#c4a66f}
+.brand-panel-line{width:70px;height:1px;background:#c4a66f;margin:34px 0 18px}
+.brand-panel-name{font:800 15px Manrope,Arial,sans-serif;letter-spacing:4px;color:#fff}
+.brand-panel-sub{font:700 9px "DM Sans",Arial,sans-serif;letter-spacing:2.5px;color:#8f9aaa;margin-top:7px}
+.section{padding:105px 0}
+.section.white{background:white}
+.section-head{max-width:700px;margin-bottom:50px}
+.kicker{font-size:10px;letter-spacing:2.2px;font-weight:800;color:var(--gold);margin-bottom:13px}
+.section h2{font-size:42px;line-height:1.1;letter-spacing:-1.4px;margin:0}
+.section-head p{color:var(--muted);line-height:1.8;font-size:15px;margin-top:16px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.about-copy{color:#586575;line-height:1.9;font-size:15px}
+.principles{border-top:1px solid var(--line)}
+.principle{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:23px 0;border-bottom:1px solid var(--line)}
+.principle b{font-family:Manrope;font-size:12px;color:var(--gold)}
+.principle h3{margin:0 0 6px;font-size:17px}
+.principle p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.service{background:#fff;border:1px solid var(--line);padding:28px 24px;min-height:190px;transition:.2s}
+.service:hover{border-color:#c8b58f;transform:translateY(-3px)}
+.icon{width:38px;height:38px;border:1px solid #d8c8a9;color:var(--gold);display:grid;place-items:center;font-weight:800;font-size:12px;margin-bottom:25px}
+.service h3{font-size:16px;margin:0 0 10px}
+.service p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
+.opps{background:#111d2b;color:white}
+.opps .section-head p{color:#9da9b8}
+.project-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:16px}
+.project{min-height:360px;background:#182638;border:1px solid #2b3a4c;padding:28px;position:relative;overflow:hidden}
+.project.small{min-height:360px}
+.project:after{content:"";position:absolute;inset:auto -40px -100px;width:260px;height:260px;border:1px solid rgba(196,166,111,.25);border-radius:50%}
+.project .tag{font-size:9px;letter-spacing:1.8px;color:#c4a66f;font-weight:800}
+.project h3{font-size:27px;margin:14px 0 9px;max-width:380px}
+.project p{color:#9ba8b8;font-size:12px;line-height:1.7;max-width:360px}
+.project .status{position:absolute;bottom:28px;left:28px;font-size:10px;color:#d4dae1;border-top:1px solid #334457;padding-top:12px;width:calc(100% - 56px)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step{padding:28px 22px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step span{font:800 11px Manrope;color:var(--gold)}
+.step h3{font-size:15px;margin:18px 0 8px}
+.step p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
+.contact{background:#e9e9e5}
+.contact-grid{display:grid;grid-template-columns:1fr .85fr;gap:70px}
+.contact-card{background:#101b2a;color:white;padding:38px}
+.contact-card h3{font-size:25px;margin:0 0 20px}
+.contact-row{padding:17px 0;border-bottom:1px solid #2c3a4b;font-size:13px}
+.contact-row span{display:block;color:#8794a4;font-size:10px;letter-spacing:1.3px;margin-bottom:6px}
+form{background:white;border:1px solid var(--line);padding:32px}
+label{display:block;font-size:10px;font-weight:800;letter-spacing:.8px;color:#566273;margin-bottom:7px}
+input,textarea{width:100%;padding:13px 12px;border:1px solid #d7dce2;font:inherit;font-size:13px;outline:none;background:#fbfbfa}
+textarea{min-height:120px;resize:vertical}
+.field{margin-bottom:16px}
+.footer{background:#0a111b;color:#8490a0;padding:34px 0}
+.footerin{display:flex;justify-content:space-between;gap:25px;align-items:center}
+.footer strong{color:white;font-family:Manrope}
+.disclaimer{font-size:10px;line-height:1.7;max-width:650px}
+.reveal{opacity:0;transform:translateY(14px);transition:.6s ease}.reveal.show{opacity:1;transform:none}
+
+@media(max-width:850px){
+ .topbar{display:none}.nav{height:70px}.container{padding:0 19px}
+ .menu{display:none}.navcta{display:none}.mobile-menu{display:block;font-size:24px}
+ .hero-grid{grid-template-columns:1fr;min-height:auto;padding:90px 0 70px;gap:40px}
+ .brand-panel{height:280px}.brand-panel-mark{font-size:78px}
+ .section{padding:75px 0}.section h2{font-size:34px}
+ .about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
+ .services{grid-template-columns:1fr 1fr}
+ .project-grid{grid-template-columns:1fr}
+ .project,.project.small{min-height:270px}
+ .process{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .footerin{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:520px){
+ .brand{font-size:14px}.subbrand{font-size:7px}
+ .logo{width:44px;height:44px}.hero h1{letter-spacing:-1.8px}
+ .hero p{font-size:15px}.services{grid-template-columns:1fr}
+ .process{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}
+ .step:last-child{border-bottom:0}
+}
+
+/* Mobile overflow & hero polish */
+html, body { overflow-x: hidden; }
+.hero, .hero-inner, .hero-copy, .hero-visual { min-width: 0; }
+.hero-copy h1, .hero-copy p, .hero-copy * { overflow-wrap: anywhere; }
+.hero-points { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.hero-point { min-width: 0; }
+.hero-point strong, .hero-point span { overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .hero-points { grid-template-columns: 1fr; gap: 10px; }
+  .hero-point { padding: 13px 14px; }
+  .hero-copy h1 { font-size: clamp(34px, 10vw, 52px); line-height: 1.08; }
+  .hero-copy p { max-width: 100%; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div>REAL ESTATE • PROPERTY • DEVELOPMENT</div>
+    <div>Uttar Badda, GM Bari, Dhaka</div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="container navin">
+    <a href="#home" class="brandbox">
+      <div class="logo" aria-label="BS Holdings & Development logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 29V11h10c5 0 8 2.2 8 5.5 0 2.1-1.3 3.8-3.5 4.6 2.8.6 4.5 2.5 4.5 5.2 0 4.1-3.4 6.7-9 6.7H9Zm5-14v4h5c2.2 0 3.5-.7 3.5-2s-1.3-2-3.5-2h-5Zm0 8v5h5.6c2.4 0 3.8-.8 3.8-2.5s-1.4-2.5-3.8-2.5H14Z" fill="#C4A66F"/>
+          <path d="M29 29V11h2v18h-2Z" fill="#fff" opacity=".85"/>
+          <path d="M6 31.5h28" stroke="#C4A66F" stroke-width="1"/>
+        </svg>
+      </div>
+      <div><div class="brand">BS HOLDINGS</div><div class="subbrand">HOLDINGS & DEVELOPMENT</div></div>
+    </a>
+    <div class="menu">
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#opportunities">OPPORTUNITIES</a>
+      <a href="#process">PROCESS</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+    <a class="navcta" href="#contact">ENQUIRE</a>
+    <div class="mobile-menu">☰</div>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">REAL ESTATE • DEVELOPMENT • PROPERTY</div>
+      <h1>আপনার প্রপার্টির<br><span>সঠিক সিদ্ধান্তে আমরা পাশে।</span></h1>
+      <p>BS Holdings & Development ঢাকায় ফ্ল্যাট, জমি, Joint Venture এবং Development Opportunity নিয়ে কাজ করে—পরিষ্কার তথ্য, দায়িত্বশীল যোগাযোগ ও বাস্তব প্রয়োজনকে গুরুত্ব দিয়ে।</p>
+      <div class="actions">
+        <a class="btn gold" href="#opportunities">প্রপার্টি দেখুন</a>
+        <a class="btn ghost" href="#contact">যোগাযোগ করুন</a>
+      </div>
+      <div class="hero-note">
+        <div>Service Area<strong>Dhaka & Surrounding Areas</strong></div>
+        <div>Our Priority<strong>Trust & Transparency</strong></div>
+        <div>Office<strong>Uttar Badda, Dhaka</strong></div>
+      </div>
+    </div>
+    <div class="brand-panel reveal" aria-label="BS Holdings brand mark">
+      <div class="brand-panel-mark">
+        <span>B</span><span>S</span>
+      </div>
+      <div class="brand-panel-line"></div>
+      <div class="brand-panel-name">BS HOLDINGS</div>
+      <div class="brand-panel-sub">HOLDINGS &amp; DEVELOPMENT</div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section white">
+ <div class="container">
+  <div class="about-grid">
+   <div class="section-head reveal">
+    <div class="kicker">BS HOLDINGS সম্পর্কে</div>
+    <h2>প্রপার্টি নিয়ে কাজ করি পরিষ্কারভাবে, বাস্তব প্রয়োজনকে সামনে রেখে।</h2>
+    <p>আমরা property transaction ও development opportunity-কে পরিষ্কার তথ্য, যোগাযোগ এবং বাস্তব প্রয়োজনের ভিত্তিতে এগিয়ে নিতে কাজ করি।</p>
+   </div>
+   <div class="about-copy reveal">
+    <p>BS Holdings & Development-এর কাজের কেন্দ্র হলো property owners, buyers, investors এবং development partners-এর মধ্যে practical connection তৈরি করা।</p>
+    <p>আমাদের public communication-এ আমরা ইচ্ছাকৃতভাবে অতিরঞ্জিত দাবি, guaranteed return বা unverified project credential ব্যবহার করি না। কোনো property বা opportunity নিয়ে এগোনোর আগে location, documentation, commercial terms এবং transaction requirements যাচাই করা গুরুত্বপূর্ণ।</p>
+   </div>
+  </div>
+  <div class="principles" style="margin-top:55px">
+   <div class="principle reveal"><b>01</b><div><h3>Clarity</h3><p>কাজের scope, property information এবং next step পরিষ্কারভাবে উপস্থাপন করা।</p></div></div>
+   <div class="principle reveal"><b>02</b><div><h3>Discipline</h3><p>প্রতিটি enquiry-কে প্রয়োজন, budget ও transaction context অনুযায়ী handle করা।</p></div></div>
+   <div class="principle reveal"><b>03</b><div><h3>Long-term relationships</h3><p>একটি deal-এর চেয়ে দীর্ঘমেয়াদি professional relationship-কে বেশি গুরুত্ব দেওয়া।</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="services" class="section">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="kicker">আমাদের সেবা</div>
+   <h2>প্রয়োজন অনুযায়ী প্রপার্টি সেবা।</h2>
+   <p>আপনার requirement অনুযায়ী property sourcing, transaction support এবং development-related coordination.</p>
+  </div>
+  <div class="services">
+   <div class="service reveal"><div class="icon">01</div><h3>Flat & Apartment</h3><p>Buy, sell এবং suitable property shortlist করার support.</p></div>
+   <div class="service reveal"><div class="icon">02</div><h3>Land</h3><p>Residential ও development-oriented land opportunities.</p></div>
+   <div class="service reveal"><div class="icon">03</div><h3>Joint Venture</h3><p>Landowner ও development partner-এর মধ্যে opportunity coordination.</p></div>
+   <div class="service reveal"><div class="icon">04</div><h3>Development</h3><p>Development opportunity, planning discussion ও partner coordination.</p></div>
+   <div class="service reveal"><div class="icon">05</div><h3>Property Advisory</h3><p>Requirement, location ও commercial fit নিয়ে initial discussion.</p></div>
+   <div class="service reveal"><div class="icon">06</div><h3>Construction</h3><p>Construction-related coordination subject to project scope and agreement.</p></div>
+   <div class="service reveal"><div class="icon">07</div><h3>Interior</h3><p>Interior and finishing requirements-এর জন্য project-based coordination.</p></div>
+   <div class="service reveal"><div class="icon">08</div><h3>Property Sourcing</h3><p>Buyer বা partner requirement অনুযায়ী opportunity sourcing.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="opportunities" class="section opps">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="kicker">প্রপার্টি সুযোগ</div>
+   <h2>বাছাই করা প্রপার্টি ক্যাটাগরি।</h2>
+   <p>Current availability changes. Specific property details, pricing and documentation should be confirmed directly before any commitment.</p>
+  </div>
+  <div class="project-grid">
+   <article class="project reveal"><div class="tag">RESIDENTIAL</div><h3>Apartment opportunities</h3><p>Dhaka-based residential properties for buyers seeking location, size and budget fit.</p><div class="status">STATUS · ENQUIRE FOR CURRENT INVENTORY</div></article>
+   <article class="project small reveal"><div class="tag">LAND</div><h3>Land & JV</h3><p>Selected land and joint venture opportunities subject to documentation and commercial review.</p><div class="status">STATUS · CASE BY CASE</div></article>
+   <article class="project small reveal"><div class="tag">DEVELOPMENT</div><h3>Project coordination</h3><p>Development discussions for suitable owners, partners and project requirements.</p><div class="status">STATUS · DISCUSSION BASIS</div></article>
+  </div>
+ </div>
+</section>
+
+<section id="process" class="section white">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="kicker">আমরা যেভাবে কাজ করি</div>
+   <h2>সহজ ও পরিষ্কার একটি প্রক্রিয়া।</h2>
+   <p>Clear steps reduce confusion and help both sides decide whether an opportunity is worth pursuing.</p>
+  </div>
+  <div class="process">
+   <div class="step reveal"><span>01</span><h3>Requirement</h3><p>Understand budget, location, property type and objective.</p></div>
+   <div class="step reveal"><span>02</span><h3>Shortlist</h3><p>Identify relevant opportunities and share available information.</p></div>
+   <div class="step reveal"><span>03</span><h3>Review</h3><p>Discuss location, documents, terms and practical next steps.</p></div>
+   <div class="step reveal"><span>04</span><h3>Meeting</h3><p>Arrange communication or site visit where appropriate.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="section contact">
+ <div class="container contact-grid">
+  <div class="reveal">
+   <div class="kicker">যোগাযোগ</div>
+   <h2>আপনার প্রপার্টি নিয়ে কথা বলি।</h2>
+   <p style="color:#697585;line-height:1.8;max-width:500px">আপনার requirement পাঠান। Suitable opportunity থাকলে আমরা পরবর্তী ধাপ নিয়ে যোগাযোগ করব।</p>
+   <div class="contact-card" style="margin-top:32px">
+    <h3>BS HOLDINGS</h3>
+    <div class="contact-row"><span>OFFICE</span>Uttar Badda, GM Bari, Dhaka</div>
+    <div class="contact-row"><span>WHATSAPP</span>+880 1916 818469</div>
+    <div class="contact-row"><span>EMAIL</span>badaruddinoffice@gmail.com</div>
+   </div>
+  </div>
+  <form class="reveal" onsubmit="sendWhatsApp(event)">
+   <div class="field"><label>NAME</label><input id="name" required placeholder="Your name"></div>
+   <div class="field"><label>PROPERTY TYPE</label><input id="ptype" placeholder="Flat / Land / JV / Other"></div>
+   <div class="field"><label>REQUIREMENT</label><textarea id="msg" required placeholder="Briefly describe your requirement"></textarea></div>
+   <button class="btn" style="border:0;background:#102033;color:#fff;width:100%;cursor:pointer">SEND ENQUIRY VIA WHATSAPP</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="footer">
+ <div class="container footerin">
+  <div><strong>BS HOLDINGS & DEVELOPMENT</strong><div class="disclaimer" style="margin-top:8px">Property information, availability, pricing and documentation are subject to change and must be independently verified before transaction.</div></div>
+  <div style="font-size:10px">© 2026 BS Holdings & Development</div>
+ </div>
+</footer>
+
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value.trim();
+ const t=document.getElementById('ptype').value.trim();
+ const m=document.getElementById('msg').value.trim();
+ const text=`Hello BS Holdings & Development,%0A%0AName: ${encodeURIComponent(n)}%0AProperty Type: ${encodeURIComponent(t)}%0ARequirement: ${encodeURIComponent(m)}`;
+ window.open('https://wa.me/8801916818469?text='+text,'_blank');
+}
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
